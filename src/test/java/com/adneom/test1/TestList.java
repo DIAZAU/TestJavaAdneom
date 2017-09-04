@@ -57,4 +57,17 @@ public class TestList {
 		int size = 5;
 		build.partition(list, size);
 	}
+	
+	@Test
+	public void testPartition6() throws Exception{
+		List<Integer> list = Arrays.asList(1,2,3,4,5);
+		int size = 1;
+		List<List<Integer>> result = new ArrayList<List<Integer>>();
+		result.add(Arrays.asList(1));
+		result.add(Arrays.asList(2));
+		result.add(Arrays.asList(3));
+		result.add(Arrays.asList(4));
+		result.add(Arrays.asList(5));
+		Assert.assertEquals(result, build.partition(list, size));
+	}
 }
